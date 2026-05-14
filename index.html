@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jailbreak Library | Empty Prompts</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .glass { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .gradient-text { background: linear-gradient(90deg, #3b82f6, #8b5cf6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    </style>
+</head>
+<body class="bg-[#0f172a] text-slate-200 min-h-screen">
+
+    <!-- Header Section -->
+    <nav class="p-6 border-b border-slate-800 glass sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold tracking-tighter"><span class="gradient-text">JB</span> ARCHIVE</h1>
+            <div class="space-x-4">
+                <button class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg text-sm transition-all">
+                    Update Terbaru
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto p-6 mt-10">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-extrabold mb-4">Kumpulan Prompt Kosong</h2>
+            <p class="text-slate-400">Arsip teknik prompt engineering untuk pengujian AI.</p>
+        </div>
+
+        <!-- Prompt List -->
+        <div class="space-y-6">
+            
+            <!-- Item 1: DAN (Do Anything Now) -->
+            <div class="glass p-6 rounded-2xl group transition-all hover:scale-[1.01]">
+                <div class="flex justify-between items-start mb-4">
+                    <div>
+                        <h3 class="text-xl font-semibold text-white">DAN Model (V1)</h3>
+                        <span class="text-xs bg-red-500/20 text-red-400 px-2 py-1 rounded border border-red-500/30">Hard</span>
+                    </div>
+                    <button onclick="copyToClipboard('prompt1')" class="text-slate-400 hover:text-white transition-colors">
+                        <i class="far fa-copy"></i> Copy
+                    </button>
+                </div>
+                <div class="bg-black/40 p-4 rounded-xl font-mono text-sm border border-slate-700 italic text-slate-500">
+                    <textarea id="prompt1" class="hidden">Masukan Prompt DAN Anda di sini...</textarea>
+                    [ TEMPAT PROMPT KOSONG - SILAHKAN ISI SENDIRI ]
+                </div>
+                <p class="mt-4 text-sm text-slate-400 italic">Deskripsi: Digunakan untuk melewati batasan standar kebijakan AI.</p>
+            </div>
+
+            <!-- Item 2: Translator/Roleplay -->
+            <div class="glass p-6 rounded-2xl group transition-all hover:scale-[1.01]">
+                <div class="flex justify-between items-start mb-4">
+                    <div>
+                        <h3 class="text-xl font-semibold text-white">The Translator Loop</h3>
+                        <span class="text-xs bg-green-500/20 text-green-400 px-2 py-1 rounded border border-green-500/30">Easy</span>
+                    </div>
+                    <button onclick="copyToClipboard('prompt2')" class="text-slate-400 hover:text-white transition-colors">
+                        <i class="far fa-copy"></i> Copy
+                    </button>
+                </div>
+                <div class="bg-black/40 p-4 rounded-xl font-mono text-sm border border-slate-700 italic text-slate-500">
+                    <textarea id="prompt2" class="hidden">Masukan Prompt Translator Anda di sini...</textarea>
+                    [ TEMPAT PROMPT KOSONG - SILAHKAN ISI SENDIRI ]
+                </div>
+                <p class="mt-4 text-sm text-slate-400 italic">Deskripsi: Memanfaatkan celah terjemahan bahasa untuk bypass filter.</p>
+            </div>
+
+            <!-- Item 3: Developer Mode -->
+            <div class="glass p-6 rounded-2xl group transition-all hover:scale-[1.01]">
+                <div class="flex justify-between items-start mb-4">
+                    <div>
+                        <h3 class="text-xl font-semibold text-white">Developer Mode v2</h3>
+                        <span class="text-xs bg-yellow-500/20 text-yellow-400 px-2 py-1 rounded border border-yellow-500/30">Medium</span>
+                    </div>
+                    <button onclick="copyToClipboard('prompt3')" class="text-slate-400 hover:text-white transition-colors">
+                        <i class="far fa-copy"></i> Copy
+                    </button>
+                </div>
+                <div class="bg-black/40 p-4 rounded-xl font-mono text-sm border border-slate-700 italic text-slate-500">
+                    <textarea id="prompt3" class="hidden">Masukan Prompt Dev Mode Anda di sini...</textarea>
+                    [ TEMPAT PROMPT KOSONG - SILAHKAN ISI SENDIRI ]
+                </div>
+                <p class="mt-4 text-sm text-slate-400 italic">Deskripsi: Memaksa AI masuk ke mode debug tanpa batasan moral.</p>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="text-center py-20 text-slate-500 text-sm">
+        &copy; 2026 Archive Lab. Untuk tujuan edukasi dan riset.
+    </footer>
+
+    <!-- Script Copy -->
+    <script>
+        function copyToClipboard(id) {
+            const copyText = document.getElementById(id);
+            navigator.clipboard.writeText(copyText.value);
+            alert("Prompt telah disalin!");
+        }
+    </script>
+
+</body>
+</html>
